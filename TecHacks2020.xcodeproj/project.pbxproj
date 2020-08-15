@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		6B4531AF24E760E2003EFB82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531AD24E760E2003EFB82 /* Main.storyboard */; };
 		6B4531B124E760E4003EFB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531B024E760E4003EFB82 /* Assets.xcassets */; };
 		6B4531B424E760E4003EFB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531B224E760E4003EFB82 /* LaunchScreen.storyboard */; };
+		7B656839E30544B2F4157C79 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; fileRef = 301122B6F5636FE346FC8740 /* FSCalendar */; };
+		BEE250EED2A900373F875F75 /* Pods_TecHacks2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF947C33AA7D0CC6C16CF1D /* Pods_TecHacks2020.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301122B6F5636FE346FC8740 /* FSCalendar */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar; path = ../../../../../../../../Desktop/GitHub/TecHacks2020/Pods/FSCalendar/FSCalendar; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EC455029B54BCE8908C043 /* Pods-TecHacks2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecHacks2020.debug.xcconfig"; path = "Target Support Files/Pods-TecHacks2020/Pods-TecHacks2020.debug.xcconfig"; sourceTree = "<group>"; };
 		6B4531A424E760E2003EFB82 /* TecHacks2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TecHacks2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4531A724E760E2003EFB82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B4531A924E760E2003EFB82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		6B4531B024E760E4003EFB82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B4531B324E760E4003EFB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B4531B524E760E4003EFB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E3DA0E53C2C10CED12E80F /* Pods-TecHacks2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecHacks2020.release.xcconfig"; path = "Target Support Files/Pods-TecHacks2020/Pods-TecHacks2020.release.xcconfig"; sourceTree = "<group>"; };
+		FEF947C33AA7D0CC6C16CF1D /* Pods_TecHacks2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TecHacks2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B656839E30544B2F4157C79 /* FSCalendar in Frameworks */,
+				BEE250EED2A900373F875F75 /* Pods_TecHacks2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		258EB924DD5EF7217968036A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42EC455029B54BCE8908C043 /* Pods-TecHacks2020.debug.xcconfig */,
+				C3E3DA0E53C2C10CED12E80F /* Pods-TecHacks2020.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		62F65B05FA4A916FD68BEDEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				301122B6F5636FE346FC8740 /* FSCalendar */,
+				FEF947C33AA7D0CC6C16CF1D /* Pods_TecHacks2020.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B45319B24E760E2003EFB82 = {
 			isa = PBXGroup;
 			children = (
 				6B4531A624E760E2003EFB82 /* TecHacks2020 */,
 				6B4531A524E760E2003EFB82 /* Products */,
+				258EB924DD5EF7217968036A /* Pods */,
+				62F65B05FA4A916FD68BEDEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B4531B824E760E4003EFB82 /* Build configuration list for PBXNativeTarget "TecHacks2020" */;
 			buildPhases = (
+				E98B6CAB5D9400E58709886F /* [CP] Check Pods Manifest.lock */,
 				6B4531A024E760E2003EFB82 /* Sources */,
 				6B4531A124E760E2003EFB82 /* Frameworks */,
 				6B4531A224E760E2003EFB82 /* Resources */,
+				FD08EC58CCD99362B80C42B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E98B6CAB5D9400E58709886F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TecHacks2020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD08EC58CCD99362B80C42B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TecHacks2020/Pods-TecHacks2020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TecHacks2020/Pods-TecHacks2020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TecHacks2020/Pods-TecHacks2020-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B4531A024E760E2003EFB82 /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		6B4531B924E760E4003EFB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42EC455029B54BCE8908C043 /* Pods-TecHacks2020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		6B4531BA24E760E4003EFB82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E3DA0E53C2C10CED12E80F /* Pods-TecHacks2020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

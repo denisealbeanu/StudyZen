@@ -1,0 +1,6 @@
+framework module Pods_TecHacks2020 {
+  umbrella header "Pods-TecHacks2020-umbrella.h"
+
+  export *
+  module * { export * }
+}
