@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+        
     var label: UILabel = {
         let label = UILabel()
         label.text = "Hello World"

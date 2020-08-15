@@ -5,5 +5,7 @@
 //  Created by Angela Du on 2020-08-15.
 //  Copyright © 2020 Angela Du. All rights reserved.
 //
-
-import Foundation
+struct section {
+ var sectionName : String
+ var sectionImage : UIImage
+}
