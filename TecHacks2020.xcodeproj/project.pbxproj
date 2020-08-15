@@ -13,6 +13,9 @@
 		6B4531AF24E760E2003EFB82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531AD24E760E2003EFB82 /* Main.storyboard */; };
 		6B4531B124E760E4003EFB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531B024E760E4003EFB82 /* Assets.xcassets */; };
 		6B4531B424E760E4003EFB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531B224E760E4003EFB82 /* LaunchScreen.storyboard */; };
+		6BB9B78324E78F7B00CE0179 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B78124E78F7B00CE0179 /* SWRevealViewController.m */; };
+		6BB9B78524E7909800CE0179 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B78424E7909800CE0179 /* HomeViewController.swift */; };
+		6BB9B78724E7936300CE0179 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B78624E7936300CE0179 /* MenuViewController.swift */; };
 		7B656839E30544B2F4157C79 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; fileRef = 301122B6F5636FE346FC8740 /* FSCalendar */; };
 		BEE250EED2A900373F875F75 /* Pods_TecHacks2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF947C33AA7D0CC6C16CF1D /* Pods_TecHacks2020.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,11 @@
 		6B4531B024E760E4003EFB82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B4531B324E760E4003EFB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B4531B524E760E4003EFB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BB9B78024E78F7A00CE0179 /* TecHacks2020-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TecHacks2020-Bridging-Header.h"; sourceTree = "<group>"; };
+		6BB9B78124E78F7B00CE0179 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		6BB9B78224E78F7B00CE0179 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		6BB9B78424E7909800CE0179 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6BB9B78624E7936300CE0179 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C3E3DA0E53C2C10CED12E80F /* Pods-TecHacks2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TecHacks2020.release.xcconfig"; path = "Target Support Files/Pods-TecHacks2020/Pods-TecHacks2020.release.xcconfig"; sourceTree = "<group>"; };
 		FEF947C33AA7D0CC6C16CF1D /* Pods_TecHacks2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TecHacks2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +92,7 @@
 		6B4531A624E760E2003EFB82 /* TecHacks2020 */ = {
 			isa = PBXGroup;
 			children = (
+				6BB9B77E24E78F4B00CE0179 /* Libraries */,
 				6B4531A724E760E2003EFB82 /* AppDelegate.swift */,
 				6B4531A924E760E2003EFB82 /* SceneDelegate.swift */,
 				6B4531AB24E760E2003EFB82 /* ViewController.swift */,
@@ -91,8 +100,28 @@
 				6B4531B024E760E4003EFB82 /* Assets.xcassets */,
 				6B4531B224E760E4003EFB82 /* LaunchScreen.storyboard */,
 				6B4531B524E760E4003EFB82 /* Info.plist */,
+				6BB9B78424E7909800CE0179 /* HomeViewController.swift */,
+				6BB9B78624E7936300CE0179 /* MenuViewController.swift */,
 			);
 			path = TecHacks2020;
+			sourceTree = "<group>";
+		};
+		6BB9B77E24E78F4B00CE0179 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6BB9B77F24E78F5900CE0179 /* SWRevealViewController */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		6BB9B77F24E78F5900CE0179 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BB9B78224E78F7B00CE0179 /* SWRevealViewController.h */,
+				6BB9B78124E78F7B00CE0179 /* SWRevealViewController.m */,
+				6BB9B78024E78F7A00CE0179 /* TecHacks2020-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +158,7 @@
 				TargetAttributes = {
 					6B4531A324E760E2003EFB82 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -210,9 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB9B78524E7909800CE0179 /* HomeViewController.swift in Sources */,
 				6B4531AC24E760E2003EFB82 /* ViewController.swift in Sources */,
 				6B4531A824E760E2003EFB82 /* AppDelegate.swift in Sources */,
 				6B4531AA24E760E2003EFB82 /* SceneDelegate.swift in Sources */,
+				6BB9B78724E7936300CE0179 /* MenuViewController.swift in Sources */,
+				6BB9B78324E78F7B00CE0179 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +390,7 @@
 			baseConfigurationReference = 42EC455029B54BCE8908C043 /* Pods-TecHacks2020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6AW5B7TQK;
 				INFOPLIST_FILE = TecHacks2020/Info.plist;
@@ -366,6 +400,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techacks2020.TecHacks2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TecHacks2020/Libraries/SWRevealViewController/TecHacks2020-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,6 +412,7 @@
 			baseConfigurationReference = C3E3DA0E53C2C10CED12E80F /* Pods-TecHacks2020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6AW5B7TQK;
 				INFOPLIST_FILE = TecHacks2020/Info.plist;
@@ -385,6 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techacks2020.TecHacks2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TecHacks2020/Libraries/SWRevealViewController/TecHacks2020-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -29,17 +29,19 @@ class ViewController: UIViewController {
     }
     @objc func action()
     {
-    time += 1
-    label.text = String(time)
+        time += 1
+        label.text = String(time)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
-        
+        setupReveal()
     }
-
-
+    
+    func setupReveal() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
 }
 
