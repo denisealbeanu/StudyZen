@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+var dict = [
+    "Study time": 0,
+    "Total Study Time": 0
+]
+
 class HomeViewController: UIViewController {
         
     var label: UILabel = {
@@ -32,10 +37,5 @@ class HomeViewController: UIViewController {
         view.addSubview(label)
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-    
-    func setupReveal() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 }

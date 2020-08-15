@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StudyViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     
     override func viewDidLoad() {

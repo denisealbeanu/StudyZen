@@ -11,23 +11,24 @@ import UIKit
 
 class MenuViewController: UITableViewController {
     let cellId = "cellId"
-     var products : [section] = [section]()
+    var products : [section] = [section]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createListArray()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-                
-
+        tableView.register(MenuItemCell.self, forCellReuseIdentifier: cellId)
+        
+        
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MenuItemCell
+        
         let currentLastItem = products[indexPath.row]
-        cell.textLabel?.text = currentLastItem.sectionName
-        cell.textLabel?.textColor = .white
-        cell.textLabel?.font = UIFont(name: "ChalkboardSE-Bold", size: 23)
-        cell.imageView?.image = currentLastItem.sectionImage
-        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        cell.menuLabel.text = currentLastItem.sectionName
+        cell.menuLabel.textColor = .white
+        cell.menuLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 23)
+        cell.menuImage.image = currentLastItem.sectionImage
+        
         if (indexPath.row % 2 == 0) {
             cell.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else {
@@ -37,7 +38,8 @@ class MenuViewController: UITableViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         tableView.contentSize.height = screenSize.height/5
         return cell
-        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
@@ -52,13 +54,48 @@ class MenuViewController: UITableViewController {
     
     func tableView2(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath as IndexPath) as UITableViewCell
-
+        
         //configure your cell
-
+        
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        if indexPath.row == 0 { //Welcome
+            let welcome = WelcomeViewController()
+            let navigationViewController = UINavigationController(rootViewController: welcome)
+            revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
+            
+        } else if indexPath.row == 1 { //Calendar
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let calendarVC = storyboard.instantiateViewController(withIdentifier: "homeVC")
+            let navController = UINavigationController(rootViewController: calendarVC)
+            revealViewController()?.pushFrontViewController(navController, animated: true)
+            
+        } else if indexPath.row == 2 { //Study Tracker
+            let studyTracker = StudyViewController()
+            let navigationViewController = UINavigationController(rootViewController: studyTracker)
+            revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
+
+        } else if indexPath.row == 3 { //Grade Tracker
+            let gradeTracker = GradeViewController()
+            let navigationViewController = UINavigationController(rootViewController: gradeTracker)
+            revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
+            
+        } else if indexPath.row == 4 { //Mood Tracker
+            let moodTracker = MoodViewController()
+            let navigationViewController = UINavigationController(rootViewController: moodTracker)
+            revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
+            
+        }
+    }
 }
- 
+
 //    func layoutViews() {
 //        view.backgroundColor = .white
 //    }
@@ -71,7 +108,7 @@ class MenuViewController: UITableViewController {
 //        return 5
 //    }
 //    
-    //Default table cell
+//Default table cell
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
 //        cell.textLabel?.text = "asdf"
@@ -83,5 +120,5 @@ class MenuViewController: UITableViewController {
 //        let navigationViewController = UINavigationController(rootViewController: rootViewController)
 //        revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
 //    }
-    //depending on which row is selected, push which veiw controller
+//depending on which row is selected, push which veiw controller
 //}

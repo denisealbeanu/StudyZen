@@ -38,10 +38,5 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupReveal()
     }
-    
-    func setupReveal() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Menu Filled-50.png"), style: .plain, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
 }
 
