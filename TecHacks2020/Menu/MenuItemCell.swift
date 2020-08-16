@@ -16,7 +16,7 @@ class MenuItemCell: UITableViewCell {
         stackView.distribution = .fill
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.spacing = 5
+        stackView.spacing = 7
         
         stackView.addArrangedSubviews([menuLabel, menuImage])
         
@@ -26,8 +26,8 @@ class MenuItemCell: UITableViewCell {
     lazy var menuImage: UIImageView = {
         let menuImage = UIImageView()
         menuImage.translatesAutoresizingMaskIntoConstraints = false
-        menuImage.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        menuImage.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        menuImage.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        menuImage.heightAnchor.constraint(equalToConstant: 29).isActive = true
         return menuImage
     }()
     
@@ -50,8 +50,8 @@ class MenuItemCell: UITableViewCell {
     func layoutItems() {
         stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: -80).isActive = true
         stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20).isActive = true
+        stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 23).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -18).isActive = true
     }
     
     required init?(coder: NSCoder) {

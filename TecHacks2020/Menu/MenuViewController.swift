@@ -36,9 +36,7 @@ class MenuViewController: UITableViewController {
         } else {
             cell.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         }
-        
-        let screenSize: CGRect = UIScreen.main.bounds
-        tableView.contentSize.height = screenSize.height/5
+
         return cell
     }
     

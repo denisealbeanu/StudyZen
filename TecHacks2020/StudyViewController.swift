@@ -110,21 +110,19 @@ class StudyViewController: UIViewController {
 
     override func viewDidLoad() {
         setupReveal()
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.418486735, green: 0.6923183693, blue: 0.5116335288, alpha: 1)
-        self.navigationItem.title = "Study Tracker"
-//            //[NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.navigationController!.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Bold", size: 19)!,
-             NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
-
-
-        
+        customizeNavBar()
 
         view.backgroundColor = #colorLiteral(red: 0.831372549, green: 0.9215686275, blue: 0.8156862745, alpha: 1)
         layoutViews()
         //Stop by putting -> timer.invalidate()
     }
-    
+    func customizeNavBar() {
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.418486735, green: 0.6923183693, blue: 0.5116335288, alpha: 1)
+        self.navigationItem.title = "Study Tracker"
+        self.navigationController!.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Bold", size: 19)!,
+             NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
+    }
     func layoutViews() {
         view.addSubview(playButton)
         view.addSubview(buttonControlStackView)
@@ -247,6 +245,7 @@ class StudyViewController: UIViewController {
     @objc func pauseTimer() {
         timer?.invalidate()
         playButton.isEnabled = true
+        
     }
     
     func getTotalTime() -> Int {
