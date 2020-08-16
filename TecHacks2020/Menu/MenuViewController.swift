@@ -29,6 +29,8 @@ class MenuViewController: UITableViewController {
         cell.menuLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 23)
         cell.menuImage.image = currentLastItem.sectionImage
         
+        view.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.5019607843, blue: 0.5019607843, alpha: 1)
+        
         if (indexPath.row % 2 == 0) {
             cell.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else {

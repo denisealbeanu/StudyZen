@@ -10,8 +10,10 @@ import Foundation
 
 extension UIViewController {
     func setupReveal() {
-        let menuPic = UIImage(named: "Menu Filled-50")?.withRenderingMode(.alwaysTemplate).withTintColor(.white) //doesnotwork
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuPic, style: .plain, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+        
+        
+        let icon = UIImage(systemName: "list.bullet")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: icon, style: .plain, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }

@@ -14,11 +14,9 @@
 		6B4531B124E760E4003EFB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531B024E760E4003EFB82 /* Assets.xcassets */; };
 		6B4531B424E760E4003EFB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4531B224E760E4003EFB82 /* LaunchScreen.storyboard */; };
 		6B6EFAA724E7ACFD002BCD74 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAA624E7ACFD002BCD74 /* StudyViewController.swift */; };
-		6B6EFAAA24E7BFF8002BCD74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAA924E7BFF8002BCD74 /* Constants.swift */; };
 		6B6EFAB724E7CA7C002BCD74 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAB624E7CA7C002BCD74 /* Subjects.swift */; };
 		6B6EFAC124E812E7002BCD74 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAC024E812E7002BCD74 /* MenuItemCell.swift */; };
 		6B6EFAC324E82000002BCD74 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAC224E82000002BCD74 /* UIViewController+Extension.swift */; };
-		6B6EFACB24E82320002BCD74 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFACA24E82320002BCD74 /* MoodViewController.swift */; };
 		6B6EFACD24E823A5002BCD74 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFACC24E823A5002BCD74 /* WelcomeViewController.swift */; };
 		6B6EFACF24E83955002BCD74 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFACE24E83955002BCD74 /* Helper.swift */; };
 		6B6EFAD124E89403002BCD74 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAD024E89403002BCD74 /* Storage.swift */; };
@@ -55,11 +53,9 @@
 		6B4531B324E760E4003EFB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B4531B524E760E4003EFB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B6EFAA624E7ACFD002BCD74 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
-		6B6EFAA924E7BFF8002BCD74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6B6EFAB624E7CA7C002BCD74 /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		6B6EFAC024E812E7002BCD74 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		6B6EFAC224E82000002BCD74 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		6B6EFACA24E82320002BCD74 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		6B6EFACC24E823A5002BCD74 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6B6EFACE24E83955002BCD74 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6B6EFAD024E89403002BCD74 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -151,12 +147,9 @@
 				6B6EFAA624E7ACFD002BCD74 /* StudyViewController.swift */,
 				6B6EFAD024E89403002BCD74 /* Storage.swift */,
 				6B6EFACE24E83955002BCD74 /* Helper.swift */,
-				6B6EFACA24E82320002BCD74 /* MoodViewController.swift */,
 				6B9A926A24E8BF3B00FD2926 /* Mood */,
 				6B9A925D24E8B23A00FD2926 /* Notes */,
 				6B6EFAAB24E7C091002BCD74 /* Menu */,
-				6BB9B78624E7936300CE0179 /* MenuViewController.swift */,
-				6B6EFAC024E812E7002BCD74 /* MenuItemCell.swift */,
 				6B6EFAC224E82000002BCD74 /* UIViewController+Extension.swift */,
 			);
 			path = TecHacks2020;
@@ -172,7 +165,8 @@
 		6B6EFAAB24E7C091002BCD74 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				6B6EFAA924E7BFF8002BCD74 /* Constants.swift */,
+				6BB9B78624E7936300CE0179 /* MenuViewController.swift */,
+				6B6EFAC024E812E7002BCD74 /* MenuItemCell.swift */,
 				6B6EFAB624E7CA7C002BCD74 /* Subjects.swift */,
 			);
 			path = Menu;
@@ -358,7 +352,6 @@
 				6B4531A824E760E2003EFB82 /* AppDelegate.swift in Sources */,
 				6B9A926724E8B58C00FD2926 /* NotesMainViewController.swift in Sources */,
 				6B4531AA24E760E2003EFB82 /* SceneDelegate.swift in Sources */,
-				6B6EFACB24E82320002BCD74 /* MoodViewController.swift in Sources */,
 				6B9A927524E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodeld in Sources */,
 				6BB9B78724E7936300CE0179 /* MenuViewController.swift in Sources */,
 				6BB9B78324E78F7B00CE0179 /* SWRevealViewController.m in Sources */,
@@ -368,7 +361,6 @@
 				6B9A927124E8BF5F00FD2926 /* ReallySimpleNoteUITableViewCell.swift in Sources */,
 				6B9A926324E8B2AF00FD2926 /* NoteViewController.swift in Sources */,
 				6B9A927C24E8BF9900FD2926 /* ReallySimpleNoteCoreDataHelper.swift in Sources */,
-				6B6EFAAA24E7BFF8002BCD74 /* Constants.swift in Sources */,
 				6B6EFACD24E823A5002BCD74 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
