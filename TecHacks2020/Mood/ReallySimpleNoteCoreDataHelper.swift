@@ -1,10 +1,4 @@
-//
-//  ReallySimpleNoteCoreDataHelper.swift
-//  rsnt-really-simple-note-taking-ios
-//
-//  Created by Németh László Harri on 2019. 01. 25..
-//  Copyright © 2019. Németh László Harri. All rights reserved.
-//
+
 
 import Foundation
 import CoreData
