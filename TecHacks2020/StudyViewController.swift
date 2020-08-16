@@ -11,9 +11,18 @@ import UIKit
 
 
 class StudyViewController: UIViewController {
+
+    lazy var groundImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: 0, width: 700, height: 100)
+        imageView.contentMode = .scaleAspectFill
+        imageView.image = UIImage(named: "Ground-1.png")
+        return imageView
+    }()
     
     let storage: Storage = UserDefaultsStorage()
     
+
     lazy var totalTimeLabel: UILabel = {
         let label = UILabel()
         label.text = getTotalTimeText()
@@ -36,15 +45,10 @@ class StudyViewController: UIViewController {
         return imageView
     }()
     
-    lazy var groundImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Ground.png")
-        return imageView
-    }()
     
     lazy var playButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.6549019608, green: 0.9137254902, blue: 0.6862745098, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         button.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "play")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.layer.borderWidth = 1
@@ -62,7 +66,7 @@ class StudyViewController: UIViewController {
     
     lazy var pauseButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.8509803922, blue: 0.5960784314, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         button.addTarget(self, action: #selector(pauseTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "pause")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.layer.borderWidth = 1
@@ -79,7 +83,7 @@ class StudyViewController: UIViewController {
     
     lazy var stopButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.4470588235, blue: 0.5019607843, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.3378090189, blue: 0.3325169804, alpha: 1)
         button.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "stop")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.layer.borderWidth = 1
@@ -107,6 +111,7 @@ class StudyViewController: UIViewController {
         let label = UILabel()
         label.text = self.formatLabel()
         label.font = UIFont(name: "ChalkboardSE-Bold", size: 50)
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         return label
     }()
     
@@ -132,13 +137,13 @@ class StudyViewController: UIViewController {
              NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
     }
     func layoutViews() {
+        view.addSubview(groundImage)
         view.addSubview(playButton)
         view.addSubview(buttonControlStackView)
         view.addSubview(counterLabel)
         view.addSubview(totalTimeLabel)
         view.addSubview(plantImage)
         view.addSubview(totalPlantLabel)
-        view.addSubview(groundImage)
         
         counterLabel.translatesAutoresizingMaskIntoConstraints = false
         playButton.translatesAutoresizingMaskIntoConstraints = false
@@ -146,12 +151,13 @@ class StudyViewController: UIViewController {
         totalTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         plantImage.translatesAutoresizingMaskIntoConstraints = false
         totalPlantLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(groundImage)
+        groundImage.translatesAutoresizingMaskIntoConstraints = false
         
-    
-        groundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        groundImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 5).isActive = true
         
+        groundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        groundImage.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        groundImage.heightAnchor.constraint(equalToConstant: 340).isActive = true
+
         plantImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         plantImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 5).isActive = true
 
@@ -162,7 +168,7 @@ class StudyViewController: UIViewController {
         totalPlantLabel.topAnchor.constraint(equalTo: totalTimeLabel.bottomAnchor, constant: 0).isActive = true
         
         counterLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        counterLabel.topAnchor.constraint(equalTo: plantImage.bottomAnchor, constant: -16).isActive = true
+        counterLabel.topAnchor.constraint(equalTo: plantImage.bottomAnchor, constant: -25).isActive = true
         
         buttonControlStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80).isActive = true
         buttonControlStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80).isActive = true
@@ -272,11 +278,11 @@ class StudyViewController: UIViewController {
     
     func getTotalTimeText() -> String {
         let (h,m,s) = dequeueSeconds(int: getTotalTime())
-        return "Total Time: \(h) hours, \(m) minutes, \(s) seconds"
+        return "Total Time: \(h) hours, \(m) minutes, and \(s) seconds"
     }
     
     func getTotalPlantText() -> String {
         let totalNumber = getTotalTime()/10800
-        return "Number of plants grown: \(totalNumber)"
+        return "Total number of plants grown: \(totalNumber)"
     }
 }

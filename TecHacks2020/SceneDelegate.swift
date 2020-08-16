@@ -18,11 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeVC")
-
+        let welcomeViewController = WelcomeViewController()
+        
         let rearViewController = MenuViewController()
-        let navFrontViewController = UINavigationController(rootViewController: homeViewController)
+        let navFrontViewController = UINavigationController(rootViewController: welcomeViewController)
         let revealViewController = SWRevealViewController(rearViewController: rearViewController, frontViewController: navFrontViewController)
         window?.rootViewController = revealViewController
         window?.makeKeyAndVisible()

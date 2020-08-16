@@ -50,8 +50,8 @@ class MenuItemCell: UITableViewCell {
     func layoutItems() {
         stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: -80).isActive = true
         stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 23).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -18).isActive = true
+        stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 17).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
     }
     
     required init?(coder: NSCoder) {

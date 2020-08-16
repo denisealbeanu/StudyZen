@@ -34,8 +34,6 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         calendar.dataSource = self
         calendar.delegate = self
         
-    
-        
         setupReveal()
         customizeNavBar()
         
@@ -50,10 +48,11 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
              NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
     }
     
+    
     //Mark:- datasource - DO NOT NEED (Disables pressing past dates)
-//    func minimumDate(for calendar: FSCalendar) -> Date {
-//        return Date()
-//    }
+    //    func minimumDate(for calendar: FSCalendar) -> Date {
+    //        return Date()
+    //    }
     
     //Mark: - delegate
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -61,5 +60,13 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         print("Date Delected = \(formatter.string(from: date))")
     }
 }
- 
+
+
+
+
+
+
+
+
+
 
