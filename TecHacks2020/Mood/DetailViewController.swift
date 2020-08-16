@@ -1,7 +1,6 @@
 
 import UIKit
 
-
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var noteTitleLabel: UILabel!
