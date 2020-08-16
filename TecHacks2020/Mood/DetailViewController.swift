@@ -41,6 +41,13 @@ class DetailViewController: UIViewController {
                     changingReallySimpleNote: detail)
             }
         }
+//        @IBOutlet weak var noteTitleLabel: UILabel!
+//        @IBOutlet weak var noteTextTextView: UITextView!
+//        @IBOutlet weak var noteDate: UILabel!
+        
+        noteTitleLabel.font = UIFont(name: "ChalkboardSE-Regular", size: 30)
+        noteTitleLabel.textColor = .systemPink
+        noteDate.textColor = .systemPink
     }
 }
 

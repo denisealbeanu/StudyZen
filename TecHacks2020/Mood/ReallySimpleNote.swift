@@ -21,4 +21,5 @@ class ReallySimpleNote {
         self.noteText      = noteText
         self.noteTimeStamp = noteTimeStamp
     }
+    
 }

@@ -49,7 +49,7 @@ class MenuViewController: UITableViewController {
         products.append(section(sectionName: "Calendar", sectionImage: UIImage(named: "calender.png")!))
         products.append(section(sectionName: "Study Tracker", sectionImage: UIImage(named: "leaf.png")!))
         products.append(section(sectionName: "Grade Tracker", sectionImage: UIImage(named: "calculator.png")!))
-        products.append(section(sectionName: "Mood Tracker", sectionImage: UIImage(named: "smile.png")!))
+        products.append(section(sectionName: "Daily Log", sectionImage: UIImage(named: "smile.png")!))
     }
     
     func tableView2(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell {

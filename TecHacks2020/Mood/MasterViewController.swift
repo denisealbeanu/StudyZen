@@ -8,7 +8,7 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        customizeNavBar()
         // Core data initialization
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             // create alert
@@ -20,12 +20,17 @@ class MasterViewController: UITableViewController {
             // add OK action
             alert.addAction(UIAlertAction(title: "OK",
                                           style: .default))
+            alert.view.tintColor = .systemPink;
+
+
+
             // show alert
             self.present(alert, animated: true)
 
             return
         }
         
+        view.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9623551635, blue: 0.8285164548, alpha: 1)
         // As we know that container is set up in the AppDelegates so we need to refer that container.
         // We need to create a context from this container
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -104,6 +109,13 @@ class MasterViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
+    }
+    func customizeNavBar() {
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8480329949, green: 0.7161847599, blue: 0.4212287554, alpha: 1)
+        self.navigationItem.title = "Daily Log"
+        self.navigationController!.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Bold", size: 19)!,
+             NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
     }
 
 

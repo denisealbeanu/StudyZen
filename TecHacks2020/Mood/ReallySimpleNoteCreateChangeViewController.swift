@@ -88,6 +88,20 @@ class ReallySimpleNoteCreateChangeViewController : UIViewController, UITextViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        @IBOutlet weak var noteTitleTextField: UITextField!
+//        @IBOutlet weak var noteTextTextView: UITextView!
+//        @IBOutlet weak var noteDoneButton: UIButton!
+//        @IBOutlet weak var noteDateLabel: UILabel!
+        noteTitleTextField.font = UIFont(name: "ChalkboardSE-Regular", size: 15) //Writing under 'Mood Title'
+        noteTitleTextField.textColor = #colorLiteral(red: 0.2926118338, green: 0.2593574083, blue: 0.2006080385, alpha: 1)
+        noteTextTextView.font = UIFont(name: "ChalkboardSE-Regular", size: 15) //Writing in Textbox of 'how are you feeling'
+        noteTextTextView.textColor = #colorLiteral(red: 0.2926118338, green: 0.2593574083, blue: 0.2006080385, alpha: 1)
+        noteDoneButton.titleLabel?.font = UIFont(name: "ChalkboardSE-Regular", size: 25) //OK BUTTON
+        noteDoneButton.setTitleColor(#colorLiteral(red: 0.8654227475, green: 0.6556566653, blue: 0.3511713243, alpha: 1), for: .normal)
+        noteDateLabel.font = UIFont(name: "ChalkboardSE-Regular", size: 14) //DATE
+        noteDateLabel.textColor = #colorLiteral(red: 0.2202768084, green: 0.1753066167, blue: 0.088614141, alpha: 1)
+        
+        view.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9623551635, blue: 0.8285164548, alpha: 1)
         // set text view delegate so that we can react on text change
         noteTextTextView.delegate = self
         
@@ -97,6 +111,7 @@ class ReallySimpleNoteCreateChangeViewController : UIViewController, UITextViewD
             noteDateLabel.text = ReallySimpleNoteDateHelper.convertDate(date: Date.init(seconds: noteCreationTimeStamp))
             noteTextTextView.text = changingReallySimpleNote.noteText
             noteTitleTextField.text = changingReallySimpleNote.noteTitle
+            
             // enable done button by default
             noteDoneButton.isEnabled = true
         } else {

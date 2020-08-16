@@ -17,14 +17,16 @@ class StudyViewController: UIViewController {
     lazy var totalTimeLabel: UILabel = {
         let label = UILabel()
         label.text = getTotalTimeText()
-        label.font = UIFont(name: "ChalkboardSE-Regular ", size: 16)
+        label.font = UIFont(name: "ChalkboardSE-Regular", size: 16)
+        label.textColor = #colorLiteral(red: 0.2954841909, green: 0.4323643718, blue: 0.3980227289, alpha: 1)
         return label
     }()
     
     lazy var totalPlantLabel: UILabel = {
         let label = UILabel()
         label.text = getTotalPlantText()
-        label.font = UIFont(name: "ChalkboardSE-Regular ", size: 16)
+        label.font = UIFont(name: "ChalkboardSE-Regular", size: 16)
+        label.textColor = #colorLiteral(red: 0.2954841909, green: 0.4323643718, blue: 0.3980227289, alpha: 1)
         return label
     }()
     
@@ -40,7 +42,7 @@ class StudyViewController: UIViewController {
         button.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "play")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.layer.borderWidth = 1
-        button.layer.borderColor = #colorLiteral(red: 0.4156862745, green: 0.5490196078, blue: 0.6862745098, alpha: 1)
+        button.layer.borderColor = #colorLiteral(red: 0.3606600941, green: 0.5, blue: 0.3822331787, alpha: 1)
         button.setImage(icon, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 27
@@ -58,7 +60,7 @@ class StudyViewController: UIViewController {
         button.addTarget(self, action: #selector(pauseTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "pause")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.layer.borderWidth = 1
-        button.layer.borderColor = #colorLiteral(red: 0.4156862745, green: 0.5490196078, blue: 0.6862745098, alpha: 1)
+        button.layer.borderColor = #colorLiteral(red: 0.5, green: 0.3928384412, blue: 0.1582015084, alpha: 1)
         button.setImage(icon, for: .normal)
         button.layer.cornerRadius = 27
         button.layer.masksToBounds = true
@@ -75,7 +77,7 @@ class StudyViewController: UIViewController {
         button.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "stop")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.layer.borderWidth = 1
-        button.layer.borderColor = #colorLiteral(red: 0.4156862745, green: 0.5490196078, blue: 0.6862745098, alpha: 1)
+        button.layer.borderColor = #colorLiteral(red: 0.466767132, green: 0.1147519991, blue: 0.1628827654, alpha: 1)
         button.setImage(icon, for: .normal)
         button.layer.cornerRadius = 27
         button.layer.masksToBounds = true
