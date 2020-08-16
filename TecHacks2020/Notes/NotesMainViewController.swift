@@ -16,10 +16,11 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
     var models: [(title: String, note: String)] = []
     
     override func viewDidLoad() {
+        customizeNavBar()
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = #colorLiteral(red: 0.779467325, green: 0.9345891895, blue: 1, alpha: 1)
         title = "Classes"
         setupReveal()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(didTapNewNote))
@@ -90,7 +91,13 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
             
         }
     }
-    
+    func customizeNavBar() {
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1607843137, green: 0.4156862745, blue: 0.568627451, alpha: 1)
+        self.navigationItem.title = "Welcome Page"
+        self.navigationController!.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Bold", size: 19)!,
+             NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
+    }
     
 }
 
