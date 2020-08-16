@@ -36,6 +36,12 @@ class StudyViewController: UIViewController {
         return imageView
     }()
     
+    lazy var groundImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Ground.png")
+        return imageView
+    }()
+    
     lazy var playButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.6549019608, green: 0.9137254902, blue: 0.6862745098, alpha: 1)
@@ -132,6 +138,7 @@ class StudyViewController: UIViewController {
         view.addSubview(totalTimeLabel)
         view.addSubview(plantImage)
         view.addSubview(totalPlantLabel)
+        view.addSubview(groundImage)
         
         counterLabel.translatesAutoresizingMaskIntoConstraints = false
         playButton.translatesAutoresizingMaskIntoConstraints = false
@@ -139,6 +146,11 @@ class StudyViewController: UIViewController {
         totalTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         plantImage.translatesAutoresizingMaskIntoConstraints = false
         totalPlantLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(groundImage)
+        
+    
+        groundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        groundImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 5).isActive = true
         
         plantImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         plantImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 5).isActive = true
