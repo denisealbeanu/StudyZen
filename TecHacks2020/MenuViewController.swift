@@ -89,11 +89,24 @@ class MenuViewController: UITableViewController {
             revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
             
         } else if indexPath.row == 4 { //Mood Tracker
-            let moodTracker = MoodViewController()
-            let navigationViewController = UINavigationController(rootViewController: moodTracker)
-            revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
+            let storyboard = UIStoryboard(name: "Mood", bundle: nil)
+            let calendarVC = storyboard.instantiateViewController(withIdentifier: "moodVC") as! UISplitViewController
+            calendarVC.delegate = self
+            revealViewController()?.pushFrontViewController(calendarVC, animated: true)
             
         }
+    }
+}
+
+extension MenuViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
+        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
+        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
+        if topAsDetailController.detailItem == nil {
+           
+            return true
+        }
+        return false
     }
 }
 

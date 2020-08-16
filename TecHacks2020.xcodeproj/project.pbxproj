@@ -27,6 +27,16 @@
 		6B9A926324E8B2AF00FD2926 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A926124E8B2AF00FD2926 /* NoteViewController.swift */; };
 		6B9A926524E8B57900FD2926 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9A926424E8B57900FD2926 /* Notes.storyboard */; };
 		6B9A926724E8B58C00FD2926 /* NotesMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A926624E8B58C00FD2926 /* NotesMainViewController.swift */; };
+		6B9A926F24E8BF5F00FD2926 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A926B24E8BF5E00FD2926 /* MasterViewController.swift */; };
+		6B9A927024E8BF5F00FD2926 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A926C24E8BF5E00FD2926 /* DetailViewController.swift */; };
+		6B9A927124E8BF5F00FD2926 /* ReallySimpleNoteUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A926D24E8BF5E00FD2926 /* ReallySimpleNoteUITableViewCell.swift */; };
+		6B9A927224E8BF5F00FD2926 /* ReallySimpleNoteCreateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A926E24E8BF5E00FD2926 /* ReallySimpleNoteCreateChangeViewController.swift */; };
+		6B9A927524E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A927324E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodeld */; };
+		6B9A927724E8BF8600FD2926 /* ReallySimpleNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A927624E8BF8600FD2926 /* ReallySimpleNote.swift */; };
+		6B9A927924E8BF8D00FD2926 /* ReallySimpleNoteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A927824E8BF8D00FD2926 /* ReallySimpleNoteStorage.swift */; };
+		6B9A927C24E8BF9900FD2926 /* ReallySimpleNoteCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A927A24E8BF9900FD2926 /* ReallySimpleNoteCoreDataHelper.swift */; };
+		6B9A927D24E8BF9900FD2926 /* ReallySimpleNoteDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A927B24E8BF9900FD2926 /* ReallySimpleNoteDateHelper.swift */; };
+		6B9A927F24E8BFAD00FD2926 /* Mood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9A927E24E8BFAD00FD2926 /* Mood.storyboard */; };
 		6BB9B78324E78F7B00CE0179 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B78124E78F7B00CE0179 /* SWRevealViewController.m */; };
 		6BB9B78524E7909800CE0179 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B78424E7909800CE0179 /* HomeViewController.swift */; };
 		6BB9B78724E7936300CE0179 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B78624E7936300CE0179 /* MenuViewController.swift */; };
@@ -59,6 +69,16 @@
 		6B9A926124E8B2AF00FD2926 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		6B9A926424E8B57900FD2926 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		6B9A926624E8B58C00FD2926 /* NotesMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMainViewController.swift; sourceTree = "<group>"; };
+		6B9A926B24E8BF5E00FD2926 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		6B9A926C24E8BF5E00FD2926 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6B9A926D24E8BF5E00FD2926 /* ReallySimpleNoteUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReallySimpleNoteUITableViewCell.swift; sourceTree = "<group>"; };
+		6B9A926E24E8BF5E00FD2926 /* ReallySimpleNoteCreateChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReallySimpleNoteCreateChangeViewController.swift; sourceTree = "<group>"; };
+		6B9A927424E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReallySimpleNotesData.xcdatamodel; sourceTree = "<group>"; };
+		6B9A927624E8BF8600FD2926 /* ReallySimpleNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReallySimpleNote.swift; sourceTree = "<group>"; };
+		6B9A927824E8BF8D00FD2926 /* ReallySimpleNoteStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReallySimpleNoteStorage.swift; sourceTree = "<group>"; };
+		6B9A927A24E8BF9900FD2926 /* ReallySimpleNoteCoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReallySimpleNoteCoreDataHelper.swift; sourceTree = "<group>"; };
+		6B9A927B24E8BF9900FD2926 /* ReallySimpleNoteDateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReallySimpleNoteDateHelper.swift; sourceTree = "<group>"; };
+		6B9A927E24E8BFAD00FD2926 /* Mood.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mood.storyboard; sourceTree = "<group>"; };
 		6BB9B78024E78F7A00CE0179 /* TecHacks2020-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TecHacks2020-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BB9B78124E78F7B00CE0179 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		6BB9B78224E78F7B00CE0179 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -135,6 +155,7 @@
 				6B6EFAD024E89403002BCD74 /* Storage.swift */,
 				6B6EFACE24E83955002BCD74 /* Helper.swift */,
 				6B6EFACA24E82320002BCD74 /* MoodViewController.swift */,
+				6B9A926A24E8BF3B00FD2926 /* Mood */,
 				6B9A925D24E8B23A00FD2926 /* Notes */,
 				6B6EFAAB24E7C091002BCD74 /* Menu */,
 				6BB9B78624E7936300CE0179 /* MenuViewController.swift */,
@@ -169,6 +190,23 @@
 				6B9A926124E8B2AF00FD2926 /* NoteViewController.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		6B9A926A24E8BF3B00FD2926 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A927324E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodeld */,
+				6B9A927E24E8BFAD00FD2926 /* Mood.storyboard */,
+				6B9A927624E8BF8600FD2926 /* ReallySimpleNote.swift */,
+				6B9A927824E8BF8D00FD2926 /* ReallySimpleNoteStorage.swift */,
+				6B9A927A24E8BF9900FD2926 /* ReallySimpleNoteCoreDataHelper.swift */,
+				6B9A927B24E8BF9900FD2926 /* ReallySimpleNoteDateHelper.swift */,
+				6B9A926D24E8BF5E00FD2926 /* ReallySimpleNoteUITableViewCell.swift */,
+				6B9A926B24E8BF5E00FD2926 /* MasterViewController.swift */,
+				6B9A926C24E8BF5E00FD2926 /* DetailViewController.swift */,
+				6B9A926E24E8BF5E00FD2926 /* ReallySimpleNoteCreateChangeViewController.swift */,
+			);
+			path = Mood;
 			sourceTree = "<group>";
 		};
 		6BB9B77E24E78F4B00CE0179 /* Libraries */ = {
@@ -252,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9A926524E8B57900FD2926 /* Notes.storyboard in Resources */,
+				6B9A927F24E8BFAD00FD2926 /* Mood.storyboard in Resources */,
 				6B4531B424E760E4003EFB82 /* LaunchScreen.storyboard in Resources */,
 				6B4531B124E760E4003EFB82 /* Assets.xcassets in Resources */,
 				6B4531AF24E760E2003EFB82 /* Main.storyboard in Resources */,
@@ -307,12 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9A927724E8BF8600FD2926 /* ReallySimpleNote.swift in Sources */,
+				6B9A926F24E8BF5F00FD2926 /* MasterViewController.swift in Sources */,
 				6B6EFAC324E82000002BCD74 /* UIViewController+Extension.swift in Sources */,
 				6B6EFAB724E7CA7C002BCD74 /* Subjects.swift in Sources */,
 				6B6EFACF24E83955002BCD74 /* Helper.swift in Sources */,
 				6B6EFAC524E821BC002BCD74 /* GradeViewController.swift in Sources */,
 				6B6EFAC124E812E7002BCD74 /* MenuItemCell.swift in Sources */,
+				6B9A927024E8BF5F00FD2926 /* DetailViewController.swift in Sources */,
 				6B9A926224E8B2AF00FD2926 /* EntryViewController.swift in Sources */,
+				6B9A927224E8BF5F00FD2926 /* ReallySimpleNoteCreateChangeViewController.swift in Sources */,
 				6BB9B78524E7909800CE0179 /* HomeViewController.swift in Sources */,
 				6B4531AC24E760E2003EFB82 /* ViewController.swift in Sources */,
 				6B6EFAA724E7ACFD002BCD74 /* StudyViewController.swift in Sources */,
@@ -320,10 +363,15 @@
 				6B9A926724E8B58C00FD2926 /* NotesMainViewController.swift in Sources */,
 				6B4531AA24E760E2003EFB82 /* SceneDelegate.swift in Sources */,
 				6B6EFACB24E82320002BCD74 /* MoodViewController.swift in Sources */,
+				6B9A927524E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodeld in Sources */,
 				6BB9B78724E7936300CE0179 /* MenuViewController.swift in Sources */,
 				6BB9B78324E78F7B00CE0179 /* SWRevealViewController.m in Sources */,
+				6B9A927D24E8BF9900FD2926 /* ReallySimpleNoteDateHelper.swift in Sources */,
+				6B9A927924E8BF8D00FD2926 /* ReallySimpleNoteStorage.swift in Sources */,
 				6B6EFAD124E89403002BCD74 /* Storage.swift in Sources */,
+				6B9A927124E8BF5F00FD2926 /* ReallySimpleNoteUITableViewCell.swift in Sources */,
 				6B9A926324E8B2AF00FD2926 /* NoteViewController.swift in Sources */,
+				6B9A927C24E8BF9900FD2926 /* ReallySimpleNoteCoreDataHelper.swift in Sources */,
 				6B6EFAAA24E7BFF8002BCD74 /* Constants.swift in Sources */,
 				6B6EFACD24E823A5002BCD74 /* WelcomeViewController.swift in Sources */,
 			);
@@ -530,6 +578,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B9A927324E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B9A927424E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodel */,
+			);
+			currentVersion = 6B9A927424E8BF7C00FD2926 /* ReallySimpleNotesData.xcdatamodel */;
+			name = ReallySimpleNotesData.xcdatamodeld;
+			path = "../../../../../Downloads/UPDATED MOOD PAGE/rsnt-really-simple-note-taking-ios/CoreDataModel/ReallySimpleNotesData.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6B45319C24E760E2003EFB82 /* Project object */;
 }
