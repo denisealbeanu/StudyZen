@@ -83,8 +83,9 @@ class MenuViewController: UITableViewController {
             revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
 
         } else if indexPath.row == 3 { //Grade Tracker
-            let gradeTracker = GradeViewController()
-            let navigationViewController = UINavigationController(rootViewController: gradeTracker)
+            let storyboard = UIStoryboard(name: "Notes", bundle: nil)
+            let calendarVC = storyboard.instantiateViewController(withIdentifier: "notesVC")
+            let navigationViewController = UINavigationController(rootViewController: calendarVC)
             revealViewController()?.pushFrontViewController(navigationViewController, animated: true)
             
         } else if indexPath.row == 4 { //Mood Tracker

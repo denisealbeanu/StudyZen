@@ -12,6 +12,14 @@ import UIKit
 
 class StudyViewController: UIViewController {
     
+    let storage: Storage = UserDefaultsStorage()
+    
+    lazy var totalTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = getTotalTimeText()
+        return label
+    }()
+    
     lazy var playButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .red
@@ -58,8 +66,6 @@ class StudyViewController: UIViewController {
         return button
     }()
     
-    
-    
     lazy var buttonControlStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .center
@@ -94,10 +100,15 @@ class StudyViewController: UIViewController {
         view.addSubview(playButton)
         view.addSubview(buttonControlStackView)
         view.addSubview(counterLabel)
+        view.addSubview(totalTimeLabel)
         
         counterLabel.translatesAutoresizingMaskIntoConstraints = false
         playButton.translatesAutoresizingMaskIntoConstraints = false
         buttonControlStackView.translatesAutoresizingMaskIntoConstraints = false
+        totalTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        totalTimeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        totalTimeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         
         counterLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         counterLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -155,18 +166,33 @@ class StudyViewController: UIViewController {
     @objc func stopTimer() {
         print("Stop")
         timer?.invalidate()
-        let temp = timeStudied()
-        print(temp)
-        print(dequeueSeconds(int: 300))
+        
+        if storage.retrieve(key: "totalTime") == nil {
+            storage.store(key: "totalTime", object: 0)
+        }
+        
+        guard let totalTime = storage.retrieve(key: "totalTime") as? Int else { return }
+        print(totalTime)
+        storage.store(key: "totalTime", object: totalTime + timeStudied())
+        
         seconds = 0
         minutes = 0
         hours = 0
+        
         self.counterLabel.text = self.formatLabel()
-        playButton.isEnabled = true
+        
+            self.totalTimeLabel.text = getTotalTimeText()
+            playButton.isEnabled = true
     }
     
     @objc func pauseTimer() {
         timer?.invalidate()
         playButton.isEnabled = true
+    }
+    
+    func getTotalTimeText() -> String {
+        guard let totalTime = storage.retrieve(key: "totalTime") as? Int else { return "ERROR" }
+        let (h,m,s) = dequeueSeconds(int: totalTime)
+        return "Total Time: \(h) hours \(m) minutes \(s) seconds"
     }
 }
