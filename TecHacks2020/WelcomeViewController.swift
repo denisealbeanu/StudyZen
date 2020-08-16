@@ -41,6 +41,7 @@ class WelcomeViewController: UIViewController {
             button.layer.cornerRadius = 35
             button.layer.masksToBounds = true
             button.setTitle("Calendar", for: .normal)
+            button.titleLabel?.font = UIFont(name: "ChalkboardSE-Bold", size: 20)
             NSLayoutConstraint.activate([
                 button.widthAnchor.constraint(equalToConstant: 275),
                 button.heightAnchor.constraint(equalToConstant: 90)
@@ -56,6 +57,7 @@ class WelcomeViewController: UIViewController {
             button.layer.cornerRadius = 35
             button.layer.masksToBounds = true
             button.setTitle("Study Tracker", for: .normal)
+            button.titleLabel?.font = UIFont(name: "ChalkboardSE-Bold", size: 20)
             NSLayoutConstraint.activate([
                 button.widthAnchor.constraint(equalToConstant: 275),
                 button.heightAnchor.constraint(equalToConstant: 90)
@@ -71,6 +73,8 @@ class WelcomeViewController: UIViewController {
             button.layer.cornerRadius = 35
             button.layer.masksToBounds = true
             button.setTitle("Grade Tracker", for: .normal)
+            button.titleLabel?.font = UIFont(name: "ChalkboardSE-Bold", size: 20)
+
             NSLayoutConstraint.activate([
                 button.widthAnchor.constraint(equalToConstant: 275),
                 button.heightAnchor.constraint(equalToConstant: 90)
@@ -86,6 +90,8 @@ class WelcomeViewController: UIViewController {
             button.layer.cornerRadius = 35
             button.layer.masksToBounds = true
             button.setTitle("Daily Log", for: .normal)
+            button.titleLabel?.font = UIFont(name: "ChalkboardSE-Bold", size: 20)
+
             NSLayoutConstraint.activate([
                 button.widthAnchor.constraint(equalToConstant: 275),
                 button.heightAnchor.constraint(equalToConstant: 90)
