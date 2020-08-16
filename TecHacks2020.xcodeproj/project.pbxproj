@@ -18,7 +18,6 @@
 		6B6EFAB724E7CA7C002BCD74 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAB624E7CA7C002BCD74 /* Subjects.swift */; };
 		6B6EFAC124E812E7002BCD74 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAC024E812E7002BCD74 /* MenuItemCell.swift */; };
 		6B6EFAC324E82000002BCD74 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAC224E82000002BCD74 /* UIViewController+Extension.swift */; };
-		6B6EFAC524E821BC002BCD74 /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFAC424E821BC002BCD74 /* GradeViewController.swift */; };
 		6B6EFACB24E82320002BCD74 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFACA24E82320002BCD74 /* MoodViewController.swift */; };
 		6B6EFACD24E823A5002BCD74 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFACC24E823A5002BCD74 /* WelcomeViewController.swift */; };
 		6B6EFACF24E83955002BCD74 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EFACE24E83955002BCD74 /* Helper.swift */; };
@@ -60,7 +59,6 @@
 		6B6EFAB624E7CA7C002BCD74 /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		6B6EFAC024E812E7002BCD74 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		6B6EFAC224E82000002BCD74 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		6B6EFAC424E821BC002BCD74 /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
 		6B6EFACA24E82320002BCD74 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		6B6EFACC24E823A5002BCD74 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6B6EFACE24E83955002BCD74 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				6B4531B524E760E4003EFB82 /* Info.plist */,
 				6B6EFACC24E823A5002BCD74 /* WelcomeViewController.swift */,
 				6BB9B78424E7909800CE0179 /* HomeViewController.swift */,
-				6B6EFAC424E821BC002BCD74 /* GradeViewController.swift */,
 				6B6EFAA624E7ACFD002BCD74 /* StudyViewController.swift */,
 				6B6EFAD024E89403002BCD74 /* Storage.swift */,
 				6B6EFACE24E83955002BCD74 /* Helper.swift */,
@@ -351,7 +348,6 @@
 				6B6EFAC324E82000002BCD74 /* UIViewController+Extension.swift in Sources */,
 				6B6EFAB724E7CA7C002BCD74 /* Subjects.swift in Sources */,
 				6B6EFACF24E83955002BCD74 /* Helper.swift in Sources */,
-				6B6EFAC524E821BC002BCD74 /* GradeViewController.swift in Sources */,
 				6B6EFAC124E812E7002BCD74 /* MenuItemCell.swift in Sources */,
 				6B9A927024E8BF5F00FD2926 /* DetailViewController.swift in Sources */,
 				6B9A926224E8B2AF00FD2926 /* EntryViewController.swift in Sources */,

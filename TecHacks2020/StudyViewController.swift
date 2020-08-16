@@ -17,51 +17,52 @@ class StudyViewController: UIViewController {
     lazy var totalTimeLabel: UILabel = {
         let label = UILabel()
         label.text = getTotalTimeText()
+        label.font = UIFont(name: "Avenir-Medium", size: 16)
         return label
     }()
     
     lazy var playButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .red
+        button.backgroundColor = #colorLiteral(red: 0.6549019608, green: 0.9137254902, blue: 0.6862745098, alpha: 1)
         button.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "play")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.setImage(icon, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalToConstant: 40),
-            button.heightAnchor.constraint(equalToConstant: 40)
+            button.widthAnchor.constraint(equalToConstant: 50),
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
         return button
     }()
     
     lazy var pauseButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .red
+        button.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.8509803922, blue: 0.5960784314, alpha: 1)
         button.addTarget(self, action: #selector(pauseTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "pause")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.setImage(icon, for: .normal)
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalToConstant: 40),
-            button.heightAnchor.constraint(equalToConstant: 40)
+            button.widthAnchor.constraint(equalToConstant: 50),
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
         return button
     }()
     
     lazy var stopButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .red
+        button.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.4470588235, blue: 0.5019607843, alpha: 1)
         button.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         let icon = UIImage(systemName: "stop")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         button.setImage(icon, for: .normal)
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalToConstant: 40),
-            button.heightAnchor.constraint(equalToConstant: 40)
+            button.widthAnchor.constraint(equalToConstant: 50),
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
         return button
     }()
@@ -78,7 +79,7 @@ class StudyViewController: UIViewController {
     lazy var counterLabel: UILabel = {
         let label = UILabel()
         label.text = self.formatLabel()
-        label.font = .systemFont(ofSize: 50, weight: .bold)
+        label.font = UIFont(name: "Avenir-Black", size: 50)
         return label
     }()
     
@@ -107,15 +108,15 @@ class StudyViewController: UIViewController {
         buttonControlStackView.translatesAutoresizingMaskIntoConstraints = false
         totalTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        totalTimeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        totalTimeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         totalTimeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         
         counterLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        counterLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        counterLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 150).isActive = true
         
         buttonControlStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80).isActive = true
         buttonControlStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80).isActive = true
-        buttonControlStackView.topAnchor.constraint(equalTo: counterLabel.bottomAnchor).isActive = true
+        buttonControlStackView.topAnchor.constraint(equalTo: counterLabel.bottomAnchor, constant: 10).isActive = true
     }
     
     @objc func startTimer() {
@@ -191,8 +192,8 @@ class StudyViewController: UIViewController {
     }
     
     func getTotalTimeText() -> String {
-        guard let totalTime = storage.retrieve(key: "totalTime") as? Int else { return "ERROR" }
+        guard let totalTime = storage.retrieve(key: "totalTime") as? Int else { return "No Time Recoreded" }
         let (h,m,s) = dequeueSeconds(int: totalTime)
-        return "Total Time: \(h) hours \(m) minutes \(s) seconds"
+        return "Total Time: \(h) hours, \(m) minutes, \(s) seconds"
     }
 }
