@@ -4,3 +4,5 @@ StudyZen is an app that helps students increase their productivity. With feature
 
 # Screenshots
 ![](screenshots/prototype.jpg)
+![](screenshots/prototype2.jpg)
+Original prototypes of the app. 
